@@ -2,39 +2,7 @@
 
 ## 🛠️ Setup Instructions
 
-### 1️⃣ Repository Cloning 
-1. Open your terminal or command prompt  🖥️
-2. Clone the repository using the following command 🔗 
-   ```bash
-   git clone https://github.com/vishangl/OpenTalkJS.git
-3. Now enter into the clone file by using command 📂
-   ```bash
-   cd OpenTalkJS
-4. Now open the editor ✍️
-5. Write the script in the script.js file  📝
-   ```bash
-   import ollama from "ollama";
-
-   async function runChat() 
-   {
-   try 
-   {
-    const response = await ollama.chat({
-      model: "llama3.2:1b",
-      messages: [{ role: 'user', content: "capital of UK" }]
-    });
-
-    console.log("Chatbot Response:", response.message.content);
-    } 
-    catch (error) 
-    {
-        console.error("Error occurred:", error.message);
-    }
-   }
-
-   runChat();
-
-### 2️⃣ Dependencies installation
+### 1️⃣ Dependencies installation
 1. Check the version for the node using the command 🛠️
    ```bash
    node -v
@@ -44,6 +12,34 @@
 3. Check the version of the ollama 🔍
    ```bash
    ollama --version
+
+### 2️⃣Repository Cloning 
+1. Open your terminal or command prompt  🖥️
+2. Clone the repository using the following command 🔗 
+   ```bash
+   git clone https://github.com/bharvivaland/OpenTalkJS
+3. Now enter into the clone file by using command 📂
+   ```bash
+   cd OpenTalkJS
+4. Now open the editor ✍️
+5. Write the script in the script.js file  📝
+   ```bash
+  import ollama from "ollama";
+
+async function runChat() {
+  try {
+    const response = await ollama.chat({
+      model: "qwen2:0.5b",
+      messages: [{ role: 'user', content: "Generate marketing emails" }]
+    });
+
+    console.log("Chatbot Response:", response.message.content);
+  } catch (error) {
+    console.error("Error occurred:", error.message);
+  }
+}
+
+runChat();
 
 ### 3️⃣ Application execution
 1. Run the application using the command 🚦

@@ -1,0 +1,19 @@
+A bug report is a form of feedback where an individual or software development team reports issues with the functionality, usability, and/or performance of a product. It usually involves reporting specific instances of bugs that have been encountered during the course of development.
+
+In order to successfully write a bug report, it's important to:
+
+1. **Define your scope**: Clearly define what you are reporting. This includes specifying which parts of the software or hardware system you're concerned with, and why they might be causing issues.
+
+2. **Provide detailed information**: Include all relevant details about the problem such as exact dates when problems started occurring, symptoms being experienced, how often these types of bugs happen, any known fixes or workaround methods for that bug, and any documentation if available.
+
+3. **Describe your steps**: Explain what you did before and after trying to solve the issue. This will help other developers understand why it happened and what actions need to be taken to prevent similar problems from occurring in the future.
+
+4. **Provide a detailed solution**: Outline exactly how you plan to address the problem or fix the bug, including any potential solutions for future issues or improvements.
+
+5. **Describe your findings**: Summarize the nature of your issue as well as the steps you took to investigate and resolve it.
+
+6. **Respond quickly and clearly**: Respond to each question in a timely manner using clear and concise language. Provide detailed explanations for actions taken, how they were perceived by others (if applicable), and what was learned from this event.
+
+7. **Keep records**: Keep all relevant documents such as logs, issue reports, patches, or changes made during the development cycle. This can be very helpful if you need to revert back to a previous solution in case of an incorrect implementation of a bug fixing action.
+
+By following these steps, you'll help ensure that your software is being developed and maintained with fewer bugs and errors than before.

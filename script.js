@@ -150,3 +150,66 @@
 // }
 
 // GenAi_ForAll();
+
+
+// //Task_4
+// import fs from "fs";
+// import path from "path";
+// import ollama from "ollama";
+
+// async function GenAi_ForCategory(selectedCategory) {
+//     try {
+//         const questionsDir = "./Questions";
+//         const answersDir = "./Answers";
+
+//         if (!fs.existsSync(answersDir)) {
+//             fs.mkdirSync(answersDir, { recursive: true });
+//         }
+
+//         const categoryDir = path.join(questionsDir, selectedCategory);
+//         if (!fs.existsSync(categoryDir)) {
+//             console.error(`The category ${selectedCategory} does not exist in Questions directory.`);
+//             return;
+//         }
+
+//         const questionFiles = fs.readdirSync(categoryDir);
+
+//         for (const file of questionFiles) {
+//             const inputFilePath = path.join(categoryDir, file);
+
+//             if (fs.statSync(inputFilePath).isFile()) {
+//                 const inputContent = fs.readFileSync(inputFilePath, "utf-8");
+
+//                 const response = await ollama.chat({
+//                     model: "qwen2:0.5b",
+//                     messages: [{ role: "user", content: inputContent }],
+//                 });
+
+//                 const chatbotResponse = response.message.content;
+
+//                 const outputCategoryDir = path.join(answersDir, selectedCategory);
+//                 if (!fs.existsSync(outputCategoryDir)) {
+//                     fs.mkdirSync(outputCategoryDir, { recursive: true });
+//                 }
+//                 const outputFilePath = path.join(outputCategoryDir, file);
+//                 fs.writeFileSync(outputFilePath, chatbotResponse, "utf-8");
+
+//                 console.log(`Response for ${file} has been saved to ${outputFilePath}`);
+//             }
+//         }
+
+//         console.log(`All responses for category ${selectedCategory} have been processed and saved.`);
+//     } catch (error) {
+//         console.error("Error occurred:", error.message);
+//     }
+// }
+
+// const args = process.argv.slice(2);
+// if (args.length === 0) {
+//     console.error("Please provide a category as a command-line argument (e.g., Academic, Professional, Creative).");
+//     process.exit(1);
+// }
+
+// const selectedCategory = args[0];
+// GenAi_ForCategory(selectedCategory);
+
